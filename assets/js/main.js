@@ -46,7 +46,7 @@ let ageEl = document.getElementById('eta')
 let routeEl = document.getElementById('percorso')
 let priceEl = document.getElementById('prezzo')
 let carriageEl = document.getElementById('carrozza')
-let 
+let cpCodeEl = document.getElementById('codicecp')
 
 //Save user info in variables
 
@@ -94,6 +94,15 @@ form.addEventListener('submit', (event) => {
         ageEl.innerHTML = 'Biglietto maggiorenni'
     }
     
+    //Stamp carriage
+
+    function getCarriageNum(min, max) {
+        return Math.floor(Math.random() * (20 - 1 + 1) ) + 1;
+    }
+    let carriageNum = getCarriageNum(1, 20)
+    carriageEl.innerHTML = carriageNum
+
+    //Stamp CP code
     
 }
 )
