@@ -10,6 +10,14 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 */
 
+/*
+MILESTONE 1:
+Iniziamo implementando il programma senza alcuna estetica: 
+usando esclusivamente due input e un bottone (non stilizzati), 
+realizziamo le specifiche scritte sopra. La risposta finale (o output) 
+sarà anch’essa da scrivere in console. 
+*/
+
 //Save ticket price, inputs and button in variables
 
 const pricePerKm = 0.21
@@ -24,31 +32,31 @@ let age = 0;
 let kilometers = 0
 
 buttonEl.addEventListener('click', () => {
-    age = ageInput.value 
+    age = ageInput.value
     kilometers = kilometersInput.value
     console.log(age, kilometers);
     //Create a function to calc the ticket cost
-    
-    /**
-     * calculate the ticket cost
-     * @param {number} age 
-     * @param {number} kilometers 
-     * @returns ticket price
-     */
-    function getTicketCost(age, kilometers) {
-        
-        //Multiply kilometers by price/km
-        const basePrice = kilometers * pricePerKm
-        console.log(basePrice);
-        return basePrice
-        
-        //Apply discount based on age
+
+    //Multiply kilometers by price/km
+    const basePrice = kilometers * pricePerKm
+    console.log(basePrice);
+
+    //Apply discount based on age
+
+    let finalPrice = 0
+
+    if (age > 0 && age < 18) {
+        finalPrice = basePrice * 0.8
+    } else if (age > 65) {
+        finalPrice = basePrice * 0.6
+    } else {
+        finalPrice = basePrice
     }
+
+    console.log(finalPrice.toFixed(2));
+}
     //Stamp calc result
 
-    const finalPrice = getTicketCost(age, kilometers)
-    console.log();
-}
 )
 
 
