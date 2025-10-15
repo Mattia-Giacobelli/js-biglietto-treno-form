@@ -97,13 +97,17 @@ form.addEventListener('submit', (event) => {
     //Stamp carriage
 
     function getCarriageNum(min, max) {
-        return Math.floor(Math.random() * (20 - 1 + 1) ) + 1;
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
     let carriageNum = getCarriageNum(1, 20)
     carriageEl.innerHTML = carriageNum
 
     //Stamp CP code
+    let cpCode = () => {
+        return Math.floor(Math.random() * (100000 - 90000 + 1) ) + 90000;
+    }
     
+    cpCodeEl.innerHTML = cpCode()
 }
 )
 
