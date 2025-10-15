@@ -10,7 +10,15 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 */
 
-//Save ticket price and user info in variables
+//Save ticket price, inputs and button in variables
+
+const pricePerKm = 0.21
+
+const ageInput = document.getElementById('age')
+const kilometersInput = document.getElementById('kilometers')
+const buttonEl = document.querySelector('button')
+
+//Save user info in variables
 
 //Create a function to calc the ticket cost
 
