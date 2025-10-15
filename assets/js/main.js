@@ -20,6 +20,16 @@ const buttonEl = document.querySelector('button')
 
 //Save user info in variables
 
+let age = 0;
+let kilometers = 0
+
+buttonEl.addEventListener('click', () => {
+    age = ageInput.value 
+    kilometers = kilometersInput.value
+    console.log(age, kilometers);
+}
+)
+
 //Create a function to calc the ticket cost
 
 //Multiply kilometers by price/km
