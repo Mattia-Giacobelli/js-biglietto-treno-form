@@ -27,13 +27,30 @@ buttonEl.addEventListener('click', () => {
     age = ageInput.value 
     kilometers = kilometersInput.value
     console.log(age, kilometers);
+    //Create a function to calc the ticket cost
+    
+    /**
+     * calculate the ticket cost
+     * @param {number} age 
+     * @param {number} kilometers 
+     * @returns ticket price
+     */
+    function getTicketCost(age, kilometers) {
+        
+        //Multiply kilometers by price/km
+        const basePrice = kilometers * pricePerKm
+        console.log(basePrice);
+        return basePrice
+        
+        //Apply discount based on age
+    }
+    //Stamp calc result
+
+    const finalPrice = getTicketCost(age, kilometers)
+    console.log();
 }
 )
 
-//Create a function to calc the ticket cost
 
-//Multiply kilometers by price/km
 
-//Apply discount based on age
 
-//Stamp calc result
