@@ -39,6 +39,11 @@ const kilometersInput = document.getElementById('kilometers')
 const buttonEl = document.querySelector('button')
 const form = document.querySelector('form')
 
+//In page results variables
+let ageEl = document.getElementById('eta')
+let routeEl = document.getElementById('percorso')
+let priceEl = document.getElementById('prezzo')
+
 //Save user info in variables
 
 let age = 0;
@@ -49,7 +54,7 @@ form.addEventListener('submit', (event) => {
     age = ageInput.value
     kilometers = kilometersInput.value
     console.log(age, kilometers);
-    //Create a function to calc the ticket cost
+    //Calc the ticket cost
 
     //Multiply kilometers by price/km
     const basePrice = kilometers * pricePerKm
@@ -67,8 +72,13 @@ form.addEventListener('submit', (event) => {
         finalPrice = basePrice
     }
 
-    //Stamp calc result
+    //Stamp in console calc result
     console.log(finalPrice.toFixed(2));
+
+    //Stamp data and result in html
+    ageEl.innerHTML = `La tua età: ${age}`
+    routeEl.innerHTML = `Km da percorrere: ${kilometers}Km`
+    priceEl.innerHTML = `Totale: €${finalPrice.toFixed(2)}`
 }
 )
 
