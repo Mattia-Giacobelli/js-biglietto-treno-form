@@ -11,37 +11,44 @@
     <title>Biglietto del treno form</title>
 </head>
 
-<body class="debug">
+<body class="">
     <main>
         <h1 class="text-light text-center">
             CALCOLA IL PREZZO DEL TUO BIGLIETTO
         </h1>
 
         <div class="container rounded">
-            <form class="row justify-content-evenly" action="">
-                <div class="col-3 mt-5">
-                    <input id="name" type="text">
-                </div>
-                <div class="col-3 mt-5">
-                    <input id="kilometers" type="number">
-                </div>
-                <div class="col-3 mt-5">
-                    <select name="age-range" id="age">
-                        <option value="">Minorenne</option>
-                        <option value="">Maggiorenne</option>
-                        <option value="">Over 65</option>
-                    </select>
-                </div>
+            <form class="row justify-content-center" action="">
+                    <div class="col-2 mt-5">
+                        <label class="text-danger" for="name">Nome</label>
+                        <input class="border border-danger rounded" id="name" type="text">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <label class="text-danger" for="kilometers">Distanza in chilometri</label>
+                        <input class="border border-danger rounded" id="kilometers" type="number">
+                    </div>
+                    <div class="col-2 mt-5">
+                        <label class="text-danger" for="age">Età</label>
+                        <input class="border border-danger rounded" id="age" type="number">
+                    </div>
                 <div class="col-12 text-center mt-5 mb-5">
-                    <button>Calcola il prezzo</button>
-                    <button id="reset">Annulla</button>
+                    <button>
+                        <strong>
+                            Calcola il prezzo
+                        </strong>
+                    </button>
+                    <button id="reset">
+                        <strong>
+                            Annulla
+                        </strong>
+                    </button>
                 </div>
             </form>
         </div>
         <h2 class="text-light text-center fs-1">
             IL TUO BIGLIETTO
         </h2>
-        <div class="container">
+        <div class="container pb-5">
 
             <table class="table table-borderless caption-top">
                 <caption>
@@ -49,9 +56,9 @@
                         DETTAGLIO PASSEGGERI
                     </h5>
                 </caption>
-                <thead>
+                <thead class="border-top">
                     <tr>
-                        <th class="fs-5" scope="col">NOME PASSEGGERO</th>
+                        <th class="fs-5 bg-secondary" scope="col">NOME PASSEGGERO</th>
                         <th scope="col">Distanza</th>
                         <th scope="col">Offerta</th>
                         <th scope="col">Carrozza</th>
@@ -60,8 +67,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">
+                    <tr class="pt-4 pb-5">
+                        <th class="bg-secondary" scope="row">
                             <span class="fs-5" id="nome"></span>
                         </th>
                         <td>
@@ -80,15 +87,15 @@
                             <span id="prezzo"></span>
                         </td>
                     </tr>
-                    <tr>
-                        <th scope="row"></th>
+                    <tr class="border-bottom">
+                        <th class="bg-secondary pb-5" scope="row"></th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
-                   
+
                 </tbody>
             </table>
         </div>

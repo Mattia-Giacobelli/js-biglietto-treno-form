@@ -1,0 +1,41 @@
+/*Debug*/
+
+.debug {
+    main {
+        background-color: aqua;
+    }
+    .container {
+        background-color: chartreuse;
+        min-height: 300px;
+    }
+    .col-3, .col-12 {
+        background-color: blueviolet;
+        min-height: 50px;
+    }
+
+}
+
+/*Main*/
+
+body {
+    background-color: #b91450;
+}
+
+.container {
+        background-color: white;
+}
+
+label {
+    display: block;
+}
+
+button {
+    color: #b91450;
+    background-color: #cccccc;
+    border: 1px solid #808080;
+    border-radius: 5px;
+
+    &:focus {
+        border: 2px solid #d98e4c;
+    }
+}
