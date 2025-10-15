@@ -34,15 +34,19 @@ raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
 
 const pricePerKm = 0.21
 
+const nameInput = document.getElementById('name')
 const ageInput = document.getElementById('age')
 const kilometersInput = document.getElementById('kilometers')
 const buttonEl = document.querySelector('button')
 const form = document.querySelector('form')
 
 //In page results variables
+let nameEl = document.getElementById('nome')
 let ageEl = document.getElementById('eta')
 let routeEl = document.getElementById('percorso')
 let priceEl = document.getElementById('prezzo')
+let carriageEl = document.getElementById('carrozza')
+let 
 
 //Save user info in variables
 
@@ -75,10 +79,22 @@ form.addEventListener('submit', (event) => {
     //Stamp in console calc result
     console.log(finalPrice.toFixed(2));
 
-    //Stamp data and result in html
-    ageEl.innerHTML = `La tua età: ${age}`
+    //Stamp data and results in html
+    nameEl.innerHTML = nameInput.value
     routeEl.innerHTML = `Km da percorrere: ${kilometers}Km`
-    priceEl.innerHTML = `Totale: €${finalPrice.toFixed(2)}`
+    priceEl.innerHTML = `€${finalPrice.toFixed(2)}`
+    
+    //Stamp age based offer
+
+     if (age > 0 && age < 18) {
+        ageEl.innerHTML = 'Biglietto minorenni'
+    } else if (age > 65) {
+        ageEl.innerHTML = 'Biglietto Over 65'
+    } else {
+        ageEl.innerHTML = 'Biglietto maggiorenni'
+    }
+    
+    
 }
 )
 
